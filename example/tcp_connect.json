@@ -1,0 +1,56 @@
+{
+    "process_kprobe": {
+      "process": {
+        "exec_id": "Yjk1MWU3Zjg4NDQ3OjMzNjE2OTc1MzAwMDAwMDA6ODgwNTE0",
+        "pid": 880514,
+        "uid": 0,
+        "cwd": "/",
+        "binary": "/usr/local/bin/nats-server",
+        "arguments": "--jetstream --http_port 8222",
+        "flags": "procFS auid rootcwd",
+        "start_time": "2024-06-11T02:45:26.427671456Z",
+        "auid": 4294967295,
+        "docker": "fe45232cf05b81800c9a75698d96fde",
+        "parent_exec_id": "Yjk1MWU3Zjg4NDQ3OjMzNjE2OTc1MTAwMDAwMDA6ODgwMzY4",
+        "refcnt": 1,
+        "tid": 1324933
+      },
+      "parent": {
+        "exec_id": "Yjk1MWU3Zjg4NDQ3OjMzNjE2OTc1MTAwMDAwMDA6ODgwMzY4",
+        "pid": 880368,
+        "uid": 0,
+        "cwd": "/run/containerd/io.containerd.runtime.v2.task/moby/fe45232cf05b81800c9a75698d96fde12173f3e8dcf829ca3bcfdab0e2ee3705",
+        "binary": "/usr/bin/containerd-shim-runc-v2 (deleted)",
+        "arguments": "-namespace moby -id fe45232cf05b81800c9a75698d96fde12173f3e8dcf829ca3bcfdab0e2ee3705 -address /run/containerd/containerd.sock",
+        "flags": "procFS auid",
+        "start_time": "2024-06-11T02:45:26.407671336Z",
+        "auid": 4294967295,
+        "parent_exec_id": "Yjk1MWU3Zjg4NDQ3OjY1MDAwMDAwMDox",
+        "tid": 880368
+      },
+      "function_name": "tcp_sendmsg",
+      "args": [
+        {
+          "sock_arg": {
+            "family": "AF_INET6",
+            "type": "SOCK_STREAM",
+            "protocol": "IPPROTO_TCP",
+            "saddr": "172.25.0.5",
+            "daddr": "172.25.0.2",
+            "sport": 4222,
+            "dport": 49746,
+            "cookie": "18446613058135484544",
+            "state": "TCP_ESTABLISHED"
+          }
+        },
+        {
+          "int_arg": 200
+        }
+      ],
+      "action": "KPROBE_ACTION_POST",
+      "policy_name": "connect",
+      "return_action": "KPROBE_ACTION_POST"
+    },
+    "node_name": "b951e7f88447",
+    "time": "2024-07-11T02:53:23.265587057Z"
+  }
