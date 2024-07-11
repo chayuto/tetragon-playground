@@ -1,2 +1,2 @@
-# tetragon
+# Tetragon
 Tetragon
