@@ -1,0 +1,12 @@
+version: '3.8'  # Specify the version of Docker Compose
+
+services:
+  tetragon:
+    container_name: tetragon-container
+    image: quay.io/cilium/tetragon-ci:latest
+    pid: "host"
+    cgroupns: "host" # testing...
+    privileged: true
+    volumes:
+      - /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf
+    restart: "no"  # Equivalent to --rm in docker run
