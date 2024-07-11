@@ -8,5 +8,4 @@ services:
     privileged: true
     volumes:
       - /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf
-    command: [ "sh", "-c", "echo 'Started' && sleep infinity" ]
     restart: "no"  # Equivalent to --rm in docker run
