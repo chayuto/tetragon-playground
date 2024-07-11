@@ -11,4 +11,5 @@ services:
     volumes:
       - /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf
       - ./logs:/var/log/tetragon # logs option
+      - ./policies:/etc/tetragon/tetragon.tp.d  # Mount the directory with policy files
     restart: "no"  # Equivalent to --rm in docker run
