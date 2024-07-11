@@ -21,7 +21,17 @@ docker run --name tetragon-container --rm --pull always \
   quay.io/cilium/tetragon-ci:latest
 ```
 
+#### Inspect the Tetragon container
+```bash
+sudo docker exec -it tetragon-container bash
+```
+
 # Docker compose way
 ```bash 
 sudo docker compose -f docker-compose.yaml up -d
+```
+
+#### View events
+```bash
+docker exec tetragon-container tetra getevents -o compact
 ```

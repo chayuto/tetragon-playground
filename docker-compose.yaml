@@ -6,6 +6,9 @@ services:
     image: quay.io/cilium/tetragon-ci:latest
     pid: "host"
     privileged: true
+    environment:
+      - TETRAGON_EXPORT_FILENAME=/var/log/tetragon/tetragon.log # logs option
     volumes:
       - /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf
+      - ./logs:/var/log/tetragon # logs option
     restart: "no"  # Equivalent to --rm in docker run
