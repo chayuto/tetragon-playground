@@ -1,6 +1,10 @@
 # Tetragon Playground
 
-## Getting starts 
+## Getting starts
+
+### TCP connection policy example
+- log tcp event with `policies/connect.yaml`
+- parse into csv with `log_parser/tcp_connection.py`
 
 ## Docker compose way
 ```bash 

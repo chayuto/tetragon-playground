@@ -31,6 +31,12 @@ def parse_log_file(input_file, output_file):
                 sock_arg = args[0].get('sock_arg', {})
                 int_arg = args[1].get('int_arg', None)
 
+                policy_name = process_kprobe.get('policy_name')
+
+                # Fiter only entries with matched policy name
+                if policy_name != 'connect':
+                    continue
+
                 row = {
                     'node_name': log_data.get('node_name'),
                     'time': log_data.get('time'),
@@ -70,7 +76,7 @@ def parse_log_file(input_file, output_file):
                     'sock_state': sock_arg.get('state'),
                     'int_arg': int_arg,
                     'action': process_kprobe.get('action'),
-                    'policy_name': process_kprobe.get('policy_name'),
+                    'policy_name': policy_name,
                     'return_action': process_kprobe.get('return_action'),
                 }
 
