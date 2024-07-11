@@ -1,5 +1,5 @@
-# Tetragon Playground
-🐝🛡️
+# Tetragon Playground 🐝🛡️
+
 
 ## Getting starts
 
