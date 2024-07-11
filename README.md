@@ -23,5 +23,5 @@ docker run --name tetragon-container --rm --pull always \
 
 # Docker compose way
 ```bash 
-sudo docker-compose -f docker-compose.yaml up -d
+sudo docker compose -f docker-compose.yaml up -d
 ```
