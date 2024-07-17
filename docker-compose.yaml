@@ -12,4 +12,12 @@ services:
       - /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf
       - ./logs:/var/log/tetragon # logs option
       - ./policies:/etc/tetragon/tetragon.tp.d  # Mount the directory with policy files
+      - ./my_tetragon_config.yaml:/etc/tetragon/tetragon.yaml # Mount the Tetragon config file
     restart: "no"  # Equivalent to --rm in docker run
+    
+    # this is just docker log, not tetragon event log
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"  # Adjust the max size of the log file before it gets rotated
+        max-file: "3"  # Adjust the number of rotated log files to keep
