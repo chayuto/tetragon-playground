@@ -1,5 +1,5 @@
 # Tetragon Playground 🐝🛡️
-A bit unconventional way to start some fun with Tetragon without kubernetes.
+A bit unconventional way to start some Tetragon fun with `docker compose`, no kubernete or helm needed.
 
 ## Getting starts
 
