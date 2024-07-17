@@ -19,5 +19,5 @@ sudo docker exec -it tetragon-container bash
 
 #### View events
 ```bash
-docker exec tetragon-container tetra getevents -o compact
+sudo docker exec tetragon-container tetra getevents -o compact
 ```

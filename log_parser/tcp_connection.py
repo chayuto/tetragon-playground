@@ -25,17 +25,21 @@ def parse_log_file(input_file, output_file):
                 log_data = json.loads(line)
 
                 process_kprobe = log_data.get('process_kprobe', {})
-                process = process_kprobe.get('process', {})
-                parent = process_kprobe.get('parent', {})
-                args = process_kprobe.get('args', [{}])
-                sock_arg = args[0].get('sock_arg', {})
-                int_arg = args[1].get('int_arg', None)
 
                 policy_name = process_kprobe.get('policy_name')
 
                 # Fiter only entries with matched policy name
                 if policy_name != 'connect':
                     continue
+
+                process = process_kprobe.get('process', {})
+                parent = process_kprobe.get('parent', {})
+                args = process_kprobe.get('args', [{}])
+                sock_arg = args[0].get('sock_arg', {})
+                if len(args) > 1:
+                    int_arg = args[1].get('int_arg', None)
+                else:
+                    int_arg = None
 
                 row = {
                     'node_name': log_data.get('node_name'),
