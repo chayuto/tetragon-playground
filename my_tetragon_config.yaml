@@ -29,7 +29,8 @@ export-file-compress: false
 export-file-max-backups: 20
 # export-file-max-size-mb: 10
 export-file-max-size-mb: 100
-export-file-perm: 0644 # added
+# perm doesnt work?? let me know if anyone found a config
+# export-file-perm: 0644 
 export-file-rotation-interval: 0s
 export-filename:
 export-rate-limit: -1
