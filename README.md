@@ -1,5 +1,5 @@
 # Tetragon Playground 🐝🛡️
-
+A bit unconventional way to start some fun with Tetragon without kubernetes.
 
 ## Getting starts
 
