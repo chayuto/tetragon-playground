@@ -7,6 +7,11 @@
 - log tcp event with `policies/connect.yaml`
 - parse into csv with `log_parser/tcp_connection.py`
 
+### Adjusting custom configuration file
+file: `./my_tetragon_config.yaml`
+
+find more info on [Daemon configuration](https://tetragon.io/docs/reference/daemon-configuration/)
+
 ## Docker compose way
 ```bash 
 sudo docker compose -f docker-compose.yaml up -d
