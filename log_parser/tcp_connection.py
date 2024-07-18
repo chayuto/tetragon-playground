@@ -2,6 +2,14 @@ import json
 import csv
 import argparse
 
+# OPTIONAL:
+# Exclude the following processes
+EXCLUDE_PROCESSES = [
+    # '/usr/sbin/tailscaled',
+    # '/usr/bin/falcoctl',
+]
+
+
 # Function to parse the log file and write to CSV
 
 
@@ -40,6 +48,9 @@ def parse_log_file(input_file, output_file):
                     int_arg = args[1].get('int_arg', None)
                 else:
                     int_arg = None
+
+                if process.get('binary') in EXCLUDE_PROCESSES:
+                    continue
 
                 row = {
                     'node_name': log_data.get('node_name'),
