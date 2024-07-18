@@ -13,9 +13,9 @@ spec:
         type: skb
       - index: 2
         type: int
-    selectors:
-      - matchArgs:
-        - index: 1
-          operator: "Protocol"
-          values:
-          - "IPPROTO_UDP"
+    # selectors:
+    #   - matchArgs:
+    #     - index: 1
+    #       operator: "Protocol"
+    #       values:
+    #       - "IPPROTO_UDP"
