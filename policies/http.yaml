@@ -1,0 +1,27 @@
+# https://github.com/cilium/tetragon/issues/533
+apiVersion: cilium.io/v1alpha1
+kind: TracingPolicy
+metadata:
+  name: "http"
+spec:
+  tracepoints:
+    - subsystem: syscalls
+      event: sys_enter_write
+      args:
+        - index: 5
+          type: "fd"
+        - index: 6
+          type: "char_buf"
+          sizeArgIndex: 8
+        - index: 7
+          type: "size_t"
+    - subsystem: syscalls
+      event: sys_enter_read
+      args:
+        - index: 5
+          type: "fd"
+        - index: 6
+          type: "char_buf"
+          sizeArgIndex: 8
+        - index: 7
+          type: "size_t"

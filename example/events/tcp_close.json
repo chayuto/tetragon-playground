@@ -1,0 +1,61 @@
+{
+  "process_kprobe": {
+    "process": {
+      "exec_id": "ZDFhMzMxNmE2NGQ4OjkyNzk5MTk4NDk1MTg2Nzg6MjM4NjI3MQ==",
+      "pid": 2386271,
+      "uid": 0,
+      "cwd": "/",
+      "binary": "/usr/bin/udevadm",
+      "flags": "execve",
+      "start_time": "2024-07-18T05:00:29.403158442Z",
+      "auid": 4294967295,
+      "parent_exec_id": "ZDFhMzMxNmE2NGQ4OjM1NDAwMDAwMDA6Mzkz",
+      "refcnt": 1,
+      "tid": 2386271
+    },
+    "parent": {
+      "exec_id": "ZDFhMzMxNmE2NGQ4OjM1NDAwMDAwMDA6Mzkz",
+      "pid": 393,
+      "uid": 0,
+      "cwd": "/",
+      "binary": "/usr/bin/udevadm",
+      "flags": "procFS auid rootcwd",
+      "start_time": "2024-04-01T19:15:13.093639202Z",
+      "auid": 4294967295,
+      "parent_exec_id": "ZDFhMzMxNmE2NGQ4OjQxMDAwMDAwMDox",
+      "tid": 393
+    },
+    "function_name": "__cgroup_bpf_run_filter_skb",
+    "args": [
+      {
+        "sock_arg": {
+          "family": "AF_NETLINK",
+          "type": "SOCK_RAW",
+          "protocol": "IPPROTO_IP",
+          "saddr": "<nil>",
+          "daddr": "<nil>",
+          "cookie": "18446618035378515968",
+          "state": "TCP_CLOSE"
+        }
+      },
+      {
+        "skb_arg": {
+          "len": 1452,
+          "saddr": "feed:cafe:2800:0:2800:0:9200:0",
+          "daddr": "a74d:3cc8::",
+          "proto": 118,
+          "protocol": "118",
+          "family": "AF_INET6"
+        }
+      },
+      {
+        "int_arg": 0
+      }
+    ],
+    "action": "KPROBE_ACTION_POST",
+    "policy_name": "datagram",
+    "return_action": "KPROBE_ACTION_POST"
+  },
+  "node_name": "d1a3316a64d8",
+  "time": "2024-07-18T05:00:29.405431370Z"
+}
