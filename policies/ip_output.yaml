@@ -1,0 +1,11 @@
+apiVersion: cilium.io/v1alpha1
+kind: TracingPolicy
+metadata:
+  name: "ip_output_mon"
+spec:
+  kprobes:
+    - call: "ip_output"
+      syscall: false
+      args:
+        - index: 2
+          type: "skb"
