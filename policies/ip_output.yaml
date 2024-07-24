@@ -4,8 +4,8 @@ metadata:
   name: "ip_output_mon"
 spec:
   kprobes:
-    - call: "ip_output"
-      syscall: false
-      args:
-        - index: 2
-          type: "skb"
+  - call: "ip_output"
+    syscall: false
+    args:
+      - index: 2
+        type: "skb"
