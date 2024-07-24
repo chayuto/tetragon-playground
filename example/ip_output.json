@@ -1,42 +1,42 @@
 {
     "process_kprobe": {
       "process": {
-        "exec_id": "ZDFhMzMxNmE2NGQ4OjkzNzI2MDU4ODAwMDAwMDA6MjcwNTIzNw==",
-        "pid": 2705237,
+        "exec_id": "ZDFhMzMxNmE2NGQ4Ojk3OTc1MTQ3MzAwMDAwMDA6Mjc4NjU0Mw==",
+        "pid": 2786543,
         "uid": 0,
-        "cwd": "/",
-        "binary": "/usr/sbin/tailscaled",
-        "arguments": "--state=/var/lib/tailscale/tailscaled.state --socket=/run/tailscale/tailscaled.sock --port=41641",
-        "flags": "procFS auid rootcwd",
-        "start_time": "2024-07-19T06:45:15.433639231Z",
+        "cwd": "/app",
+        "binary": "/usr/local/bin/python3.10",
+        "arguments": "udp_client.py",
+        "flags": "procFS auid",
+        "start_time": "2024-07-24T04:47:04.283639168Z",
         "auid": 4294967295,
-        "parent_exec_id": "ZDFhMzMxNmE2NGQ4OjQxMDAwMDAwMDox",
-        "refcnt": 4,
-        "tid": 2705274
+        "docker": "911f3e2c594549cc4a3425a065514f7",
+        "parent_exec_id": "ZDFhMzMxNmE2NGQ4Ojk3OTc1MTQ2NzAwMDAwMDA6Mjc4NjUyMg==",
+        "refcnt": 1,
+        "tid": 2786543
       },
       "parent": {
-        "exec_id": "ZDFhMzMxNmE2NGQ4OjQxMDAwMDAwMDox",
-        "pid": 1,
+        "exec_id": "ZDFhMzMxNmE2NGQ4Ojk3OTc1MTQ2NzAwMDAwMDA6Mjc4NjUyMg==",
+        "pid": 2786522,
         "uid": 0,
-        "cwd": "/",
-        "binary": "/usr/lib/systemd/systemd",
-        "arguments": "--system --deserialize 56",
-        "flags": "procFS auid rootcwd",
-        "start_time": "2024-04-01T19:15:09.963642215Z",
+        "cwd": "/run/containerd/io.containerd.runtime.v2.task/moby/911f3e2c594549cc4a3425a065514f70058143db413881847cf06360b6c4de08",
+        "binary": "/usr/bin/containerd-shim-runc-v2",
+        "arguments": "-namespace moby -id 911f3e2c594549cc4a3425a065514f70058143db413881847cf06360b6c4de08 -address /run/containerd/containerd.sock",
+        "flags": "procFS auid",
+        "start_time": "2024-07-24T04:47:04.223639219Z",
         "auid": 4294967295,
-        "parent_exec_id": "ZDFhMzMxNmE2NGQ4OjE6MA==",
-        "tid": 1
+        "parent_exec_id": "ZDFhMzMxNmE2NGQ4OjQxMDAwMDAwMDox",
+        "tid": 2786522
       },
       "function_name": "ip_output",
       "args": [
         {
           "skb_arg": {
-            "len": 1324,
-            "mark": 524288,
-            "saddr": "10.100.101.186",
-            "daddr": "14.203.225.70",
-            "sport": 49670,
-            "dport": 59992,
+            "len": 2076,
+            "saddr": "172.27.0.3",
+            "daddr": "172.27.0.2",
+            "sport": 46158,
+            "dport": 5000,
             "proto": 17,
             "protocol": "IPPROTO_UDP",
             "family": "AF_INET"
@@ -48,5 +48,5 @@
       "return_action": "KPROBE_ACTION_POST"
     },
     "node_name": "d1a3316a64d8",
-    "time": "2024-07-24T05:14:19.264384981Z"
-}
+    "time": "2024-07-24T05:14:18.374019861Z"
+  }
